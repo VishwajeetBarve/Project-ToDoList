@@ -1,0 +1,398 @@
+/* Variables */
+:root {
+  /* Primary */
+  --brightBlue: hsl(220, 98%, 61%);
+  --checkBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* Neutral */
+  /* Light Theme */
+  --veryLight-Gray: hsl(0, 0%, 98%);
+  --veryLightGrayish-Blue: hsl(236, 33%, 92%);
+  --lightGrayish-Blue: hsl(233, 11%, 84%);
+  --darkGrayish-Blue: hsl(236, 9%, 61%);
+  --veryDarkGrayish-Blue: hsl(235, 19%, 35%);
+
+  /* Dark theme */
+  --veryDark-Blue: hsl(235, 21%, 11%);
+  --veryDark-DesaturatedBlue: hsl(235, 24%, 19%);
+  --lightGrayish-Blue: hsl(234, 39%, 85%);
+  --lightGrayish-Blue: hsl(236, 33%, 92%); /* (hover) */
+  --darkGrayish-Blue: hsl(234, 11%, 52%);
+  --veryDarkGrayish-Blue: hsl(233, 14%, 35%);
+  --veryDarkGrayish-Blue: hsl(237, 14%, 26%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(234, 39%, 95%);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 1.2rem 3.5rem;
+  height: 40vh;
+}
+
+.heading {
+  letter-spacing: 6px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* .light-theme > .header {
+  background: url(./images/bg-mobile-light.jpg);
+} */
+
+.header {
+  background: url(./images/bg-mobile-light.jpg);
+}
+
+.dark-theme > .header {
+  background: url(./images/bg-mobile-dark.jpg);
+}
+
+/* .light-theme > .header > .current-theme > .light-symbol {
+  display: none;
+} */
+
+.header > .current-theme > .light-symbol {
+  display: none;
+}
+
+/* .light-theme > .header > .current-theme > .dark-symbol {
+  display: block;
+} */
+
+.header > .current-theme > .dark-symbol {
+  display: block;
+}
+.dark-theme > .header > .current-theme > .light-symbol {
+  display: block;
+}
+.dark-theme > .header > .current-theme > .dark-symbol {
+  display: none;
+}
+
+.bottom-background {
+  /* height: 60vh; */
+  background-color: hsl(234, 39%, 95%);
+}
+
+/* .light-theme > .bottom-background {
+  background-color: var(--veryLight-Gray);
+} */
+.dark-theme > .bottom-background {
+  /* height: max-content; */
+  background-color: var(--veryDark-Blue);
+}
+
+.toDo-List {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 22%;
+  left: 5%;
+  right: 5%;
+}
+
+.createNew-List {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--veryLight-Gray);
+}
+
+.dark-theme > .createNew-List {
+  background-color: var(--veryDark-DesaturatedBlue);
+}
+
+.newTask {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  /* color: hsl(234, 39%, 85%); */
+  color: hsl(235, 19%, 35%);
+  font-size: 0.9rem;
+}
+.dark-theme > .createNew-List > label > .newTask {
+  color: hsl(234, 39%, 85%);
+}
+
+hr {
+  border: 1px solid lightgrey;
+  width: 100%;
+}
+
+.dark-theme > .currentToDo-List > .new-items > hr {
+  border: 1px solid hsl(235, 19%, 35%);
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.add-btn {
+  background-color: green;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+.add-btn > .fa-solid {
+  color: white;
+  font-weight: 700;
+}
+/* 
+.light-theme > .createNew-List {
+  background-color: var(--veryLight-Gray);
+} */
+
+/* .currentToDo-List {
+} */
+/* .new-items {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(234, 39%, 85%);
+  font-size: 0.9rem;
+  font-weight: 400;
+} */
+
+.new-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-cta {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.close-btn {
+  /* height: 15px; */
+  background-color: transparent;
+  border: none;
+}
+
+/* .currentToDo-List > article {
+  padding: 20px 20px;
+} */
+
+.currentToDo-List > li {
+  padding: 20px 20px;
+}
+
+.currentToDo-List > :nth-child(1) {
+  /* padding: 15px; */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.currentToDo-List > :last-child {
+  /* padding: 15px; */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* .currentToDo-List > article {
+  background-color: var(--veryLight-Gray);
+} */
+
+.currentToDo-List > li {
+  background-color: var(--veryLight-Gray);
+}
+
+/* .dark-theme > .currentToDo-List > article {
+  background-color: var(--veryDark-DesaturatedBlue);
+} */
+
+.dark-theme > .currentToDo-List > li {
+  background-color: var(--veryDark-DesaturatedBlue);
+}
+
+.current-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--darkGrayish-Blue);
+  font-size: 0.9rem;
+}
+
+.current-Status {
+  padding: 0.8rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  font-weight: 700;
+}
+.current-Status > span {
+  color: var(--darkGrayish-Blue);
+}
+
+/* .light-theme > .current-Status {
+  background-color: var(--veryLight-Gray);
+} */
+.current-Status {
+  background-color: var(--veryLight-Gray);
+}
+
+.dark-theme > .current-Status {
+  background-color: var(--veryDark-DesaturatedBlue);
+}
+
+.drag-drop {
+  color: var(--darkGrayish-Blue);
+  align-self: center;
+}
+
+/* Stack Overflow */
+label {
+  display: flex;
+  column-gap: 12px;
+  color: white;
+}
+
+.taskName {
+  color: hsl(235, 19%, 35%);
+  font-size: 0.9rem;
+}
+
+.dark-theme
+  > .currentToDo-List
+  > .new-items
+  > .task-info
+  > .task-cta
+  > form
+  > label
+  > span {
+  color: white;
+}
+
+INPUT[type="checkbox"]:focus {
+  outline: none;
+}
+
+INPUT[type="checkbox"] {
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+INPUT[type="checkbox"]:checked {
+  background-color: #409fd6;
+  background: #409fd6 url("./images/icon-check.svg") center center no-repeat;
+}
+.dark-mode {
+  background-color: hsl(235, 21%, 11%);
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    background: url(./images/bg-desktop-light.jpg);
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 22rem 3.5rem;
+    height: 40vh;
+  }
+
+  .dark-theme > .header {
+    background: url(./images/bg-desktop-dark.jpg);
+  }
+
+  .toDo-List {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 22%;
+    left: 26%;
+    right: 26%;
+  }
+
+  .current-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    justify-self: center;
+  }
+
+  .items-LeftInfo {
+    grid-column: 1/2;
+  }
+  .current-Status {
+    grid-column: 2/3;
+    margin-top: -25px;
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+  .current-Status > span {
+    transition: all 0.3s linear;
+  }
+
+  .current-Status > span:hover {
+    color: darkslategray;
+    cursor: pointer;
+  }
+
+  .dark-theme
+    > .currentToDo-List
+    > .current-info
+    > .current-Status
+    > span:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .clear-Completed {
+    grid-column: 3/4;
+    text-align: right;
+    transition: all 0.3s linear;
+  }
+
+  .clear-Completed:hover {
+    color: darkslategrey;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .dark-theme > .currentToDo-List > .current-info > .clear-Completed:hover {
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .currentToDo-List > :last-child {
+    padding-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .over {
+    transform: scale(1, 1);
+    /* border: 1px double #409fd6; */
+  }
+}

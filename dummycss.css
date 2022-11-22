@@ -1,0 +1,15 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  /* background-image: black url("./images/bg-desktop-dark.jpg");
+  background-position: top;
+  background-repeat: no-repeat; */
+  background: url("./images/bg-desktop-light.jpg") bottom no-repeat,
+    url("./images/bg-desktop-dark.jpg") top repeat;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}

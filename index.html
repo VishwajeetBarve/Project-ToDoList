@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="body">
+    <main class="main">
+      <header class="header">
+        <h1 class="heading">TODO</h1>
+        <div class="current-theme">
+          <img class="light-symbol" src="./images/icon-sun.svg" />
+          <img class="dark-symbol" src="./images/icon-moon.svg" />
+        </div>
+      </header>
+      <div class="bottom-background">
+        <div class="toDo-List">
+          <div class="createNew-List">
+            <label for="userTask">
+              <input
+                type="text"
+                id="userTask"
+                class="newTask"
+                placeholder="Create a new todo..."
+              />
+            </label>
+            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+          </div>
+
+          <!-- Inside this use articles instead -->
+          <ul class="currentToDo-List drag-sort-enable">
+            <li class="current-info">
+              <span class="items-LeftInfo"
+                ><span class="items-left">0</span> items left</span
+              >
+              <span class="clear-Completed">Clear Completed</span>
+            </li>
+          </ul>
+          <div class="current-Status">
+            <span class="status all">All</span>
+            <span class="status active">Active</span>
+            <span class="status completed">Completed</span>
+          </div>
+          <p class="drag-drop">Drag and drop it to reorder it</p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Add dynamic number items left -->
+
+<!-- All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list -->
